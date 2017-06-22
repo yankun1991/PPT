@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+   
+    <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")" type="text/javascript"></script>
+   @* <script src="~/Scripts/jquery-1.10.2.min.js"></script>*@
+     <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+</head>
+
+<body>
+    @RenderBody()
+       @* <script src="~/Scripts/modernizr-2.6.2.js"></script>*@
+    <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+     <script src="@Url.Content("~/Scripts/jquery.signalR-2.2.1.min.js")" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "H5";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试</title>
+<link rel="stylesheet" type="text/css" href="https://security.40017.cn/touch/css/public/common/0.0.7/common.css?v=203307201608">
+<link rel="stylesheet" href="https://security.40017.cn/touch/css/public/dialog/0.0.1/dialog.css?v=2014073102">
+<link rel="stylesheet" href="https://security.40017.cn/touch/css/mytouch/login.0.0.7.css?v=201608043753">
+<style type="text/css">
+	body{
+		background: url("../Image/qx.png") no-repeat top center #00336B;
+		background-size: 100%;
+		background-color: #00336B;
+    	text-align: center;
+    	margin: 0 auto;
+    	color: #666;
+    	font-size: 12px;
+    	font-family: "Lucida Grande", Helvetica, Arial, STHeiTi, "Microsoft YaHei", "Droid Sans", "Hiragino Sans GB", "Hiragino Sans GB W3", sans-serif;
+        max-width: none;
+    margin: 0 auto;
+    max-width:none;
+	}
+	textarea,.btnNext {
+	    color: #333;
+	    font: inherit;
+	    margin: 0;
+    	border: 0;
+	}
+	textarea {
+		font-size: 1.7rem;
+    text-indent: 10px;
+    width: 28rem;
+    margin-top: 32rem;
+    margin-bottom: 1rem;
+    height: 11rem;
+    border-radius: .3rem;
+	}
+	.btnNext{
+		width: 8rem;
+    height: 3rem;
+    line-height: 49px;
+    background: #0AB908;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    border-radius: .3rem;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+	}
+    .gray {
+        background:#768276;
+    }
+</style>
+<script src="http://www.w3school.com.cn/jquery/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#message").val("我想对你说");
+        $("#message").focus(function () {
+            if ($(this).val() == $(this).attr("attr-value")) {
+                $(this).val("");
+            }
+        }).blur(function () {
+            if ($(this).val() == "") {
+                $(this).val($(this).attr("attr-value")).css("color", "#acacac");
+            }
+        });
+        $(".btnNext").click(function () {
+            if ($(this).addClass("gray")) {
+                $.ajax({
+                    url: "send?message=" + $("#message").val(),
+                    dataType: 'json',
+                    data: "message",
+                    success: success_
+                });
+            }
+            function success_() {
+                //this.disabled = true;
+                //var me = this;
+                //setTimeout(function () { me.disabled = false; }, 5000);
+                $("#message").val("");
+                $(".btnNext").addClass("gray");
+                waitTime();
+                //setTimeout((function () { $(".btnNext").disabled = true; return function () { $(".btnNext").disabled = false; }; })($(".btnNext")), 5000);
+            }
+            function waitTime() {
+                var count = 5;
+                $(".btnNext").text(count);
+                var countdown = setInterval(CountDown, 1000);
+                function CountDown() {
+                    count = count - 1;
+                    $(".btnNext").text(count + "s");
+                    if (count <= 1) {
+                        //过了5s怎么处理。。。
+                        $(".btnNext").text("提交");
+                        $(".btnNext").removeClass("gray");
+                        clearInterval(countdown);
+                    }
+                }
+            }
+
+        })
+    });
+   
+
+</script>
+</head>
+<body>
+   
+   		<textarea type="text" id="message" name="message" attr-value="我想对你说" maxlength="100" style="color: rgb(172, 172, 172);"></textarea>
+   		<a href="javascript:void(0);" class="btnNext" >提交</a>
+  
+</body>
+</html>

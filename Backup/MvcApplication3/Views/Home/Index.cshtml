@@ -1,0 +1,184 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="../../Content/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<style>
+   #nav {
+        width: 300px;
+        height: 100%;
+        border-radius: 8px;
+        position: fixed;
+        color: #fff;
+        right: 0;
+        top: 0;
+        z-index:9999;
+    }
+    .info {
+        margin: 5px;
+        padding: 10px;
+        background: #00336B;
+        border-radius: 15px 8px 8px 0px;
+        margin-top: 10px;
+        color: #fff;
+        font-size: 20px;
+        z-index:9999;
+        line-height: 22px;
+        font-weight: bold;
+    }
+</style>
+
+<body class="impress-not-supported">
+
+    <div id="nav">
+        <div style="align-content: center" id="lyb">
+            
+            <marquee direction="up" scrollamount="8" behavior="slide" class="marquee"></marquee>
+
+        </div>
+    </div>
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div id="impress">
+        <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+
+            <h2>国内游研发8月第一周周例会</h2>
+            <span class="footnote"><sup>*</sup> 渠道支撑组策划</span>
+        </div>
+        <div class="step slide" data-x="-1400" data-y="-1500">
+            <img src="../../Image/ppt01.png" style="width: 100%; height: 100%" />
+        </div>
+
+        <div class="step slide" data-x="200" data-y="-1500" data-rotate="40">
+            <img src="../../Image/ppt02.png" style="width: 100%; height: 100%" />
+        </div>
+
+        @*    <div class="step slide" data-x="1200" data-y="-1500">
+        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    </div>
+
+    <div class="step slide" data-x="2400" data-y="-1500">
+        
+    </div>*@
+
+
+
+
+        <div class="step slide" data-x="1850" data-y="3000" data-rotate="20" data-scale="2">
+            <img src="../../Image/ppt03.png" style="width: 100%; height: 100%" />
+        </div>
+
+
+        <div class="step slide" data-x="4500" data-y="0" data-rotate="20" data-scale="2">
+            <img src="../../Image/ppt04.png" style="width: 100%; height: 100%" />
+        </div>
+
+        <div class="step slide" data-x="7500" data-y="0" data-rotate="30">
+            <img src="../../Image/ppt05.png" style="width: 100%; height: 100%" />
+        </div>
+       
+        <div class="step slide" data-x="-3000" data-y="0" data-rotate="10">
+            <img src="../../Image/ppt06.png" style="width: 100%; height: 100%" />
+        </div>
+
+        <div class="step slide" data-x="-4500" data-y="1000" data-rotate="20">
+            <img src="../../Image/ppt07.png" style="width: 100%; height: 100%" />
+        </div>
+        <div class="step slide" data-x="-1000" data-y="6000" data-rotate="10">
+            <img src="../../Image/ppt00.png" style="width: 100%; height: 100%" />
+        </div>
+        <div class="step slide" data-x="3000" data-y="1500" data-rotate="10">
+            <img src="../../Image/ppt08.png" style="width: 100%; height: 100%" />
+        </div>
+        <div class="step slide" data-x="-3000" data-y="4000" data-rotate="50">
+            <img src="../../Image/ppt09.png" style="width: 100%; height: 100%" />
+        </div>
+        
+       @* <div class="step slide" data-x="-6000" data-y="1500" data-rotate="10">
+            <img src="../../Image/11.png" style="width: 100%; height: 100%" />
+        </div>*@
+        @*<div id="tiny" class="step slide" data-x="-3025" data-y="2325" data-rotate="180" data-scale="1">
+            <img src="../../Image/11.png" style="width: 100%; height: 100%" />
+        </div>
+
+
+        <div id="ing" class="step slide" data-x="3500" data-y="-1850" data-rotate="270" data-scale="6">
+            <img src="../../Image/11.png" style="width: 100%; height: 100%" />
+        </div>
+
+        <div id="imagination" class="step" data-x="6700" data-y="-3200" data-scale="6">
+            <img src="../../Image/11.png" style="width: 100%; height: 100%" />
+        </div>
+      
+        <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+            <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+            <span class="footnote">* beat that, prezi ;)</span>
+        </div>*@
+        <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+        </div>
+
+    </div>
+
+@*    <div class="hint">
+        <p>Use a spacebar or arrow keys to navigate</p>
+    </div>*@
+     <script src="../../Scripts/impress.js"></script>
+    <script>impress().init();
+        $(function () {
+            //整个屏幕的高度
+            var height_ = $(window).height()-50;
+           
+            var connection = $.connection("/echo");
+            connection.logging = true;
+            connection.received(function (data) {
+                $("#lyb .marquee").append("<div class='info'>" + data + "</div>");
+                var len = $(".marquee div").length;
+                if (len == 1) {
+                    //初始化第一条留言的窗口距离
+                    $(".marquee div").eq(0).css("margin-top", height_ + "px");
+                }
+                //每增加一条数据 上移
+                height_ = height_ - ($(".marquee div").eq(len - 1).height() + 30);
+                console.log(height_);
+                $(".marquee div").eq(0).animate({
+                    "margin-top": height_ + 'px'
+                }, "slow");
+
+            });
+            connection.error(function (err) {
+                alert("存在一个错误. " +
+                            "Error: " + err.message);
+            });
+            connection.start().done(function () {
+                //$("#send").click(function () {
+                //    connection.send($("#text").val());
+                //    $("#text").val("").focus();
+                //});
+            });
+        });
+
+        if ("ontouchstart" in document.documentElement) {
+            document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+        }
+</script>
+   
+
+</body>
+</html>
+
+
